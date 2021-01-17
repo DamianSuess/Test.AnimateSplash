@@ -1,5 +1,17 @@
 # Xamarin.Forms Startup Animation
-This lesson shows you how to create a light-weight startup animation using static images.
+This lesson shows you how to create a light-weight startup animation after the Splash Screen using ``ScaleTo`` and ``FadeTo`` transitions in Xamarin.Forms.
+
+![](StartupAnimation.gif)
+
+When creating this project, I started from the base Prism.Forms project in Visual Studio 2019. This way, its easy for you to reproduce this on your own using the standard content.
+
+| Package | NuGet |
+|---------|-------|
+| [Xamarin.Forms](https://github.com/xamarin/Xamarin.Forms) |  |
+| [Prism.Forms](https://github.com/PrismLibrary/Prism) | [Prism.Forms](https://www.nuget.org/packages/Prism.Forms/) |
+| DryIoc | [Prism.DryIoc.Forms](https://www.nuget.org/packages/Prism.DryIoc.Forms/) |
+
+Prism is a framework for building loosely coupled, maintainable, and testable XAML applications.
 
 ## Hiding Splash Animation Navigation
 After validating our animation, we need to hide UI stuff such as the Navigation Bar. To do so we need to add, ``NavigationPage.SethasNavigationBar(this, false);`` inside the constructor of our ``SplashPage.xml.cs`` file.
@@ -106,3 +118,5 @@ And for iOS, you'd open your ``Info.plist`` and add the following lines:
 ## Without Prism
 
 For use with standard Xamarin Navigation stack, check out this article at [Mallibone.com](https://mallibone.com/post/lets-improve-that-xamarin-forms-startup-experience)
+
+_image from mallibon.com_
